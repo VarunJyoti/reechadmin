@@ -1,0 +1,367 @@
+body {
+    font-size: 14px;
+    font-family: "Lucida Grande";
+}
+@media (min-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+}
+@media (min-width: 1200px) {
+    body{
+        font-size: 18px;
+    }
+}
+
+h1{
+   font-size: 25px;
+}
+h2{
+   font-size: 20px;
+}
+h3{
+   font-size: 16px;
+}
+h4{
+   font-size: 12px;
+}
+
+@media screen and (min-width: 800px) {
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 25px;
+    } 
+    h3{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 18px;
+    }
+ }
+@media (min-width: 1200px) {
+    h1{
+        font-size: 48px;
+    }
+    h2{
+        font-size: 36px;
+    }
+    h3{
+        font-size: 28px;
+    }
+    h4{
+        font-size: 20px;
+    }
+}
+
+
+
+.panel-default>.panel-heading {
+	background-color: #337ab7!important;
+	color: #FAFAFA!important;
+}
+
+input, select {
+    height: 50px !important;
+    font-size:16px!important
+}
+
+.introText {
+    ////font-size: 4vw;
+    padding-top: 2% ;
+    padding-bottom: 2%;
+}
+
+.reechappavailable {
+    ////font-size: 1vw;
+    padding-bottom: 3%;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+.title {
+    ////font-size: 2.5vw;
+    color:#0095ff;
+    font-weight: bold;
+    margin-top: 3.5%;
+    margin-left: -53px;
+}
+.linksection{
+    margin-top: 40px;
+}
+.howitworks{
+    text-align: center;
+}
+
+.howitworks a{
+    ////font-size: 1.0vw;
+    color:#0095ff;
+}
+
+.howitworksAR a{
+    color:#fff;
+}
+
+.ontop {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    font-weight: bold;
+}
+
+.playstore.mob{
+    visibility: hidden;
+    display: none;
+}
+
+.playstore.desk{
+    text-align: center;
+    margin-top: 15%;
+    display: block;
+}
+
+.footerHeader {
+    background-color: #404040;
+    color: #FAFAFA;
+    font-size: 2vw;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.footerContents{
+    background-color: #404040;
+    font-size: 1.5vw;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #FAFAFA;
+}
+
+.footerContents a{
+    color: #FAFAFA;
+}
+
+@media screen and (max-width: 420px){
+    #section1-home {
+        background-position: center!important;
+    }
+    .inner {
+        margin-top: -33px!important;
+    }
+    .title {
+        margin-left: -45px;
+        //font-size: 3.5vw;
+        margin-top: 8%;
+    }
+    .linksection{
+        margin-top: 10px;
+    }
+
+    .playstore {
+        margin-top: 5px;
+    }
+
+    .playstore img {
+        margin-top: 10px;
+    }
+    .footerHeader {
+        font-size: 3vw;
+    }
+    .footerContents{
+        font-size: 2.5vw;
+    }
+
+    .playstore.mob{
+        text-align: center;
+        margin-bottom: 2%;
+        visibility: visible;
+        display: block;
+    }
+
+    .playstore.desk{
+        margin-top: 2%;
+        visibility: hidden;
+        display: none;
+    }
+}
+
+input::-webkit-input-placeholder {
+    color: #0095ff !important;
+}
+select, input {
+    color: #0095ff !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: #0095ff !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: #0095ff !important;
+}
+
+input:-ms-input-placeholder {
+    color: #0095ff !important;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+.phoneImg img{
+    height: 450px;
+}
+.phoneImgPosition{
+    float: right;
+}
+
+@media screen and (max-width: 763px) {
+    .phoneImg img{
+        height: 225px!important;
+        margin-top: 8%;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .chat img{
+        width: 80px !important;
+        margin-top: 8%;
+    }
+
+    .phoneImg img{
+        height: 205px!important;
+        margin-top: 6%;
+    }
+    .phoneImgPosition{
+        float: none;
+    }
+    .col-sm-8 h3{margin-top: 2%;text-align: center;}
+}
+.whoweare{
+    height: 250px;
+}
+.topBar {
+    background-color: #404040;
+    //font-size: 20px;
+    color: #FAFAFA;
+    text-align: center;
+   
+}
+.bottomBar {
+    //font-size: 20px; 
+    text-align: center;
+}
+.image-text {
+   margin-top: 20px;
+    text-align: center;
+}
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+@media (max-width: 950px){
+    .section.fp-section,
+    .section .fp-tableCell{
+        height: auto !important;
+        min-height: 100%;
+    }
+}
+
+.orgName {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.aboutreechHeading{
+    //text-align: center;
+}
+
+
+.reechforRealEstateHeading{
+    text-align: center;
+    color: #0095ff;
+}
+
+.reechforRealEstateHeading1{
+    text-align: center;
+}
+
+.top:before{
+    background-color: #FBFBFB;
+    background-image: url("../images/Broker_benefits.jpg");
+    background-position: center;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 500px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .5s;
+    width: 100%;
+}
+.top-agents:before {
+    background-color: #FBFBFB;
+    background-image: url("../images/Agent_benefits.jpg"); 
+    background-position: center;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 500px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .5s;
+    width: 100%;
+}
+.top-practices:before {
+    background-color: #FBFBFB;
+    background-image: url("../images/practices.jpg"); 
+    background-position: center;
+    background-size: cover;
+    content: '';
+    display: block;
+    height: 500px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all .5s;
+    width: 100%;
+}
+#section1-home {
+    background-image: url("../images/home.png"); 
+    background-position: left bottom;
+    background-size: cover;
+}
+
+#section1-aboutreech {
+    background-image: url("../images/About_us.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+}
+
+.ourStory {
+    margin-bottom: 1%;
+}
+.inner {
+  background-color: #404040;
+  opacity: 0.8;
+  color: #FAFAFA;
+  text-align: center;
+  margin-top: -41px;
+}
+
+ul {
+    font-size: 20px;
+}
+.contactus{
+    border: 1px #dcd0d0 solid;
+    padding: 20px;
+}
+h1, h2, h3, h4, h5 {
+    margin-top: 10px!important;
+}
