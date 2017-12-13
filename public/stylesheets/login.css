@@ -1,0 +1,29 @@
+.reechPortalText {
+   margin-top: 4%;
+    color: blue;
+    font-size: 20px;
+}
+
+.backgroundImg {
+    background-image: url("../images/About_us.png");
+    height: 650px;
+    background-size: cover;
+    position: relative;
+}
+
+.loginPanel {
+    width: 450px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    background-color: #0e0e0e;
+    text-align: center;
+    opacity: 0.6;
+    top: 25%;
+}
+
+.loginText {
+    color: white;
+    font-size: 20px;
+}

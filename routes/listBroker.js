@@ -9,7 +9,7 @@ admin.initializeApp({
 });
 const db = admin.database();
 var last ;
-router.get('/listBroker', function (req, res, next) {
+router.get('/', function (req, res, next) {
     var license = req.params.id || "";
     var startIdx = parseInt(req.query.start);
     var len = parseInt(req.query.length);
