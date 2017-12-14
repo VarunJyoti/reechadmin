@@ -1,5 +1,5 @@
 const admin = require('firebase');
-const reechWebAccount = require("../reechapp.json");
+
 var config = {
     apiKey: "AIzaSyCl-pBOkJpeMQ2xKsRfZuVeWAtU05tlafc",
     authDomain: "reechappweb-bc8bd.firebaseapp.com",
