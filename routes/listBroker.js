@@ -12,7 +12,7 @@ var last ;
 router.get('/', function (req, res, next) {
     var license = req.params.id || "";
     var startIdx = parseInt(req.query.start);
-    var len = parseInt(req.query.length);
+    var len = 2;//parseInt(req.query.length);
 
     var resJson = {}
     resJson.recordsTotal = brokersJson.data.length;
@@ -20,28 +20,29 @@ router.get('/', function (req, res, next) {
     resJson.data = brokersJson.data.slice(startIdx, startIdx + len)
     //res.json(resJson);
     
-    var ref = db.ref('agentDB').orderByChild("lic_number");
-    if (startIdx == 0) {
-        ref.limitToFirst(len);
+    var ref= db.ref('contactDB').orderByChild("license");//.startAt(3,"id");//.limitToFirst(3);
+    console.log("startidx" + startIdx);
+    /*if (startIdx == 0) {
+        ref= db.ref('contactDB').orderByChild("license").limitToFirst(len);
+        console.log("ifff");
     } else {
-        ref.startAt(last).limitToFirst(len);
+        console.log(last)
+        ref= db.ref('contactDB').orderByChild("license").startAt("1212").limitToFirst(len);
     }
-    ref.on("value", function(s) {
-        var obj = s.val();
 
-        var resObjs = [];
-        for (var objkey in obj) {
-            dbObj = obj[objkey]
-            var resObj = {"key":objkey};
-            last = dbObj["lic_number"];
-            for (var prop in dbObj) {
-                {
-                    resObj[prop] = dbObj[prop]
-                }
-            }
-            resObjs.push(resObj);
-        }
-        res.json({"data":resObjs})
+     */
+   
+    db.ref('contactDB').orderByChild("license").on("value", function (snapshot) {
+        this.resObjs = [];
+        snapshot.forEach(function(messageSnapshot) {
+        //for (var messageSnapshot in snapshot) {
+            //console.log(messageSnapshot.key);
+            dbObj = messageSnapshot.val()
+            dbObj["key"] = messageSnapshot.key;
+
+            this.resObjs.push(dbObj);
+        });
+        res.json({"data": this.resObjs})
     });
 });
 
