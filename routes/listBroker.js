@@ -19,20 +19,30 @@ router.get('/', function (req, res, next) {
     resJson.recordsFiltered = brokersJson.data.length;
     resJson.data = brokersJson.data.slice(startIdx, startIdx + len)
     //res.json(resJson);
-    
-    var ref= db.ref('contactDB').orderByChild("license");//.startAt(3,"id");//.limitToFirst(3);
-    console.log("startidx" + startIdx);
-    /*if (startIdx == 0) {
+
+    var ref = db.ref('agentDB').orderByChild("lic_number").limitToLast(20);//.startAt(3,"id");//.limitToFirst(3);
+    /* console.log("startidx" + startIdx);
+    if (startIdx == 0) {
         ref= db.ref('contactDB').orderByChild("license").limitToFirst(len);
         console.log("ifff");
     } else {
         console.log(last)
         ref= db.ref('contactDB').orderByChild("license").startAt("1212").limitToFirst(len);
-    }
+    }*/
+    ref.on("value", function (snapshot) {
+        console.log("startidx");
+        this.resObjs = [];
+        snapshot.forEach(function(messageSnapshot) {
+            //console.log(messageSnapshot.key);
+            dbObj = messageSnapshot.val()
+            dbObj["key"] = messageSnapshot.key;
+            this.resObjs.push(dbObj);
+        });
+        res.json({"data": this.resObjs})
+    });
 
-     */
-   
-    db.ref('contactDB').orderByChild("license").on("value", function (snapshot) {
+
+    /*db.ref('contactDB').orderByChild("license").on("value", function (snapshot) {
         this.resObjs = [];
         snapshot.forEach(function(messageSnapshot) {
         //for (var messageSnapshot in snapshot) {
@@ -43,7 +53,7 @@ router.get('/', function (req, res, next) {
             this.resObjs.push(dbObj);
         });
         res.json({"data": this.resObjs})
-    });
+    });*/
 });
 
 module.exports = router;

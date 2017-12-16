@@ -7,11 +7,13 @@ $(document).ready(function () {
         scrollx: true,
         columns: [
             {data: "key"},
-            {data: "comments"},
-            {data: "email"},
-            {data: "license"},
-            {data: "phone"},
-            {data: "id"}
+            {data: "empl_name"},
+            {data: "licenseNumber"},
+            {data: "emp_email"},
+            {data: "city"},
+            {data: "state"},
+            {data: "county_name"},
+            {data: "agt_name"}
         ],
         processing: true,
         serverSide: true,
@@ -21,14 +23,11 @@ $(document).ready(function () {
         searching : false,
     });
 /*
-    {data: "key"},
-    {data: "empl_name"},
-    {data: "licenseNumber"},
-    {data: "emp_email"},
-    {data: "city"},
-    {data: "state"},
-    {data: "county_name"},
-    {data: "agt_name"}*/
+ {data: "comments"},
+ {data: "email"},
+ {data: "license"},
+ {data: "phone"},
+ {data: "id"}*/
     var icon = $('<i>').addClass('fa fa-search');
     var lbl = $('<label>');
     lbl.append($('<input>').prop( "type", "search").attr("id", "brokersList_search").attr("aria-controls","brokersList").addClass("input-sm"));
